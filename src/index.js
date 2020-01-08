@@ -35,7 +35,6 @@ const resolvers = {
         },
         deleteLink: (parent, { id }) => {
             const index = links.findIndex(i => i.id === id)
-            const linkToRemove = links[index];
             const [removedLink] = links.splice(index, 1)
             return removedLink;
         }
